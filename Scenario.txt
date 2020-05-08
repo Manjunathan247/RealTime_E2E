@@ -1,0 +1,3 @@
+Open https://www.amazon.in/
+Enter username and Click on continue button
+Enter password and Click on Login button
