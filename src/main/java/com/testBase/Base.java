@@ -18,6 +18,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
+import com.utility.Listener;
 import com.utility.Wait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -36,7 +38,7 @@ public class Base {
 		initilizeDriver(config.browserName());
 	}
 
-	public void initilizeDriver(String browserName) {
+	public WebDriver initilizeDriver(String browserName) {
 		if (browserName.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
@@ -57,7 +59,7 @@ public class Base {
 		}
 		wait = new Wait(driver);
 		wait.implicitWait(config.ImplicitWait());
-		
+		return driver;
 	}
 
 	public void loadConfigurationFile() throws Throwable {
@@ -67,21 +69,20 @@ public class Base {
 		prop.load(fis);
 		log.info("Loading Property file");
 	}
-	
-	public void screenShot(String testCaseName) throws Throwable
-	{
-		String path = System.getProperty("user.dir")+"\\Reports\\"+testCaseName+".png";
+
+	public String screenShot(String testCaseName, WebDriver driver) throws Throwable {
+		String path = System.getProperty("user.dir") + "\\Reports\\" + testCaseName + ".png";
 		System.out.println(path);
-		TakesScreenshot screen = (TakesScreenshot)driver;
+		TakesScreenshot screen = (TakesScreenshot) driver;
 		File source = screen.getScreenshotAs(OutputType.FILE);
-		
+
 		File desc = new File(path);
 		FileUtils.copyFile(source, desc);
+		return path;
 	}
-	
+
 	@AfterTest
-	public void closeBrowser()
-	{
+	public void closeBrowser() {
 		driver.close();
 	}
 
