@@ -28,6 +28,7 @@ public class Base {
 	public static Logger log = LogManager.getLogger(Base.class.getName());
 	public static WebDriver driver;
 	public Properties prop;
+	public String browserName;
 	Configuration config;
 	Wait wait;
 
@@ -35,7 +36,7 @@ public class Base {
 	public void launchBrowser() throws Throwable {
 		loadConfigurationFile();
 		config = new Configuration(prop);
-		initilizeDriver(config.browserName());
+		initilizeDriver(browserName);
 	}
 
 	public void initilizeDriver(String browserName) {
