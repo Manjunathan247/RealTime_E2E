@@ -2,29 +2,29 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="22207" started-at="2020-05-11T12:21:05Z" finished-at="2020-05-11T12:21:27Z">
+  <suite name="Suite" duration-ms="54004" started-at="2020-05-18T06:02:57Z" finished-at="2020-05-18T06:03:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="22207" started-at="2020-05-11T12:21:05Z" finished-at="2020-05-11T12:21:27Z">
+    <test name="Test" duration-ms="54004" started-at="2020-05-18T06:02:57Z" finished-at="2020-05-18T06:03:51Z">
       <class name="com.testcases.LoginPageTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="launchBrowser" is-config="true" duration-ms="7731" started-at="2020-05-11T12:21:05Z" finished-at="2020-05-11T12:21:13Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="launchBrowser" is-config="true" duration-ms="9168" started-at="2020-05-18T06:02:57Z" finished-at="2020-05-18T06:03:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="login()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="login" duration-ms="10342" started-at="2020-05-11T12:21:13Z" finished-at="2020-05-11T12:21:23Z">
+        <test-method status="FAIL" signature="login()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="login" duration-ms="43383" started-at="2020-05-18T06:03:06Z" finished-at="2020-05-18T06:03:49Z">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [nline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in] but found [Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in]]]>
+              <![CDATA[expected [Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in] but found [Authentication required]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [nline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in] but found [Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in]
+              <![CDATA[java.lang.AssertionError: expected [Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in] but found [Authentication required]
 at org.testng.Assert.fail(Assert.java:96)
 at org.testng.Assert.failNotEquals(Assert.java:776)
 at org.testng.Assert.assertEqualsImpl(Assert.java:137)
 at org.testng.Assert.assertEquals(Assert.java:118)
 at org.testng.Assert.assertEquals(Assert.java:453)
 at org.testng.Assert.assertEquals(Assert.java:463)
-at com.testcases.LoginPageTest.login(LoginPageTest.java:24)
+at com.testcases.LoginPageTest.login(LoginPageTest.java:25)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -60,7 +60,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="closeBrowser" is-config="true" duration-ms="4102" started-at="2020-05-11T12:21:23Z" finished-at="2020-05-11T12:21:27Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="closeBrowser" is-config="true" duration-ms="959" started-at="2020-05-18T06:03:50Z" finished-at="2020-05-18T06:03:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

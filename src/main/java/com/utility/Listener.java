@@ -27,10 +27,9 @@ public class Listener extends Base implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-		WebDriver driver = null;
 		extentTest.get().fail(result.getThrowable());
 		String testMethodName = result.getMethod().getMethodName();
-		/*try {
+		try {
 			driver =(WebDriver)result.getTestClass().getRealClass().getDeclaredField("driver").get(result.getInstance());
 		} catch(Exception e)
 		{
@@ -45,7 +44,7 @@ public class Listener extends Base implements ITestListener {
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}*/
+		}
 
 	}
 

@@ -2,6 +2,7 @@ package com.testcases;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import com.objectRepo.LoginPage;
@@ -22,7 +23,7 @@ public class LoginPageTest extends Base {
 		driver.get(config.url());
 		loginPage.login(config.username(), config.password());
 		Assert.assertEquals(verify.verifyTitle(),
-				"nline Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
+				"Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in");
 		log.info("Login - Success");
 	}
 

@@ -26,7 +26,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Base {
 	public static Logger log = LogManager.getLogger(Base.class.getName());
-	public WebDriver driver;
+	public static WebDriver driver;
 	public Properties prop;
 	Configuration config;
 	Wait wait;
@@ -38,7 +38,7 @@ public class Base {
 		initilizeDriver(config.browserName());
 	}
 
-	public WebDriver initilizeDriver(String browserName) {
+	public void initilizeDriver(String browserName) {
 		if (browserName.equalsIgnoreCase("Chrome")) {
 			WebDriverManager.chromedriver().setup();
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
@@ -59,7 +59,6 @@ public class Base {
 		}
 		wait = new Wait(driver);
 		wait.implicitWait(config.ImplicitWait());
-		return driver;
 	}
 
 	public void loadConfigurationFile() throws Throwable {
@@ -71,11 +70,9 @@ public class Base {
 	}
 
 	public String screenShot(String testCaseName, WebDriver driver) throws Throwable {
-		String path = System.getProperty("user.dir") + "\\Reports\\" + testCaseName + ".png";
-		System.out.println(path);
+		String path = System.getProperty("user.dir") + "\\Screenshots\\" + testCaseName + ".png";
 		TakesScreenshot screen = (TakesScreenshot) driver;
 		File source = screen.getScreenshotAs(OutputType.FILE);
-
 		File desc = new File(path);
 		FileUtils.copyFile(source, desc);
 		return path;

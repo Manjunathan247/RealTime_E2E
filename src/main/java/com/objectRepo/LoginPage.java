@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 import com.utility.ActionsHelp;
 
 public class LoginPage {
-	private WebDriver driver;
+	public WebDriver driver;
 	ActionsHelp ah;
 	@FindBy(xpath="//a[@id='nav-link-accountList']")
 	WebElement navigation;
