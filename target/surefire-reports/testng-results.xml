@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="54004" started-at="2020-05-18T06:02:57Z" finished-at="2020-05-18T06:03:51Z">
+  <suite name="Suite" duration-ms="53493" started-at="2020-05-18T08:20:51Z" finished-at="2020-05-18T08:21:44Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="54004" started-at="2020-05-18T06:02:57Z" finished-at="2020-05-18T06:03:51Z">
+    <test name="Test" duration-ms="53493" started-at="2020-05-18T08:20:51Z" finished-at="2020-05-18T08:21:44Z">
       <class name="com.testcases.LoginPageTest">
-        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="launchBrowser" is-config="true" duration-ms="9168" started-at="2020-05-18T06:02:57Z" finished-at="2020-05-18T06:03:06Z">
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="launchBrowser" is-config="true" duration-ms="15131" started-at="2020-05-18T08:20:51Z" finished-at="2020-05-18T08:21:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="FAIL" signature="login()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="login" duration-ms="43383" started-at="2020-05-18T06:03:06Z" finished-at="2020-05-18T06:03:49Z">
+        <test-method status="FAIL" signature="login()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="login" duration-ms="35448" started-at="2020-05-18T08:21:06Z" finished-at="2020-05-18T08:21:41Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in] but found [Authentication required]]]>
@@ -60,7 +60,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:451)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="closeBrowser" is-config="true" duration-ms="959" started-at="2020-05-18T06:03:50Z" finished-at="2020-05-18T06:03:51Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.testcases.LoginPageTest@69e1dd28]" name="closeBrowser" is-config="true" duration-ms="1315" started-at="2020-05-18T08:21:43Z" finished-at="2020-05-18T08:21:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
